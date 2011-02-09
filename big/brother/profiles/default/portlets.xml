@@ -1,0 +1,15 @@
+<?xml version="1.0"?>
+<portlets>
+
+ <portlet 
+   addview="big.brother.auditlog"
+   title="Audit Trail"
+   description="A portlet that will tell you who has viewed a particular item.">
+   <for interface="plone.app.portlets.interfaces.IColumn" />
+   <for interface="plone.app.portlets.interfaces.IDashboard" />
+ </portlet>
+ 
+ <assignment name="audit" category="context" key="/" 
+        manager="plone.rightcolumn" type="big.brother.auditlog" visible="True" />
+
+</portlets>

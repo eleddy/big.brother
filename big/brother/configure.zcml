@@ -6,7 +6,10 @@
     i18n_domain="big.brother">
 
   <five:registerPackage package="." initialize=".initialize" />
-
+  <include file="permissions.zcml" />
+  <include package=".browser" />
+  <include package=".portlets" />
+  
   <genericsetup:registerProfile
       name="default"
       title="big.brother"
@@ -14,6 +17,13 @@
       description="Installs the big.brother package"
       provides="Products.GenericSetup.interfaces.EXTENSION"
       />
-  <!-- -*- extra stuff goes here -*- -->
+      
+   <genericsetup:registerProfile
+      name="uninstall"
+      title="big.brother"
+      directory="profiles/uninstall"
+      description="Uninstalls the big.brother package"
+      provides="Products.GenericSetup.interfaces.EXTENSION"
+      />
   
 </configure>

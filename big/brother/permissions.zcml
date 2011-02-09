@@ -1,0 +1,11 @@
+<configure
+    xmlns="http://namespaces.zope.org/zope"
+    i18n_domain="example.conference">
+
+    <permission
+        id="big.brother.ViewAuditLog"
+        title="big.brother: View Audit Log"
+        />
+
+
+</configure>

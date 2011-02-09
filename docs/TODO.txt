@@ -1,0 +1,7 @@
+TODO
+====
+ - The viewlet isn't uninstalling correctly. That needs
+   to be fixed. Or migrate to using an event (if it exists). See
+   userviews.py for notes on that.
+ - Hide portlet on edit pages.
+ - Tests.

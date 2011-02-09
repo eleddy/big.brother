@@ -1,0 +1,31 @@
+<configure
+    xmlns="http://namespaces.zope.org/zope"
+    xmlns:browser="http://namespaces.zope.org/browser"
+    xmlns:plone="http://namespaces.plone.org/plone"
+    xmlns:zcml="http://namespaces.zope.org/zcml"
+    xmlns:five="http://namespaces.zope.org/five"
+    >
+
+    
+    <browser:resourceDirectory
+      name="big.brother.stylesheets"
+      directory="stylesheets"
+      />
+        
+    <browser:viewlet 
+		name="big.brother.iswatching"
+	 	for="Products.CMFCore.interfaces.IContentish"
+	 	manager="plone.app.layout.viewlets.interfaces.IBelowContentTitle"
+	 	class=".userview.UserViewsViewlet"
+		view="plone.app.layout.globals.interfaces.IViewView"
+		permission="zope2.View"
+     	/>
+     	
+    <browser:view 
+		name="audit_logs"
+	 	for="Products.CMFCore.interfaces.IContentish"
+	 	class=".userview.UserViewsViewlet"
+		permission="big.brother.ViewAuditLog"
+     	/>
+     	
+</configure>

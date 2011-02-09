@@ -1,0 +1,36 @@
+<dl class="portlet bio-portlet"
+    xmlns:tal="http://xml.zope.org/namespaces/tal"
+    tal:define="member context/@@plone_portal_state/member;
+                pm context/@@plone_tools/membership;">
+    
+    <dt class="portletHeader">
+        <span class="portletTopLeft"></span>
+        <span tal:content="view/portletTitle">Portlet Title</span>
+        <span class="portletTopRight"></span>
+    </dt>
+  <dd tal:define="log context/getAuditLog|nothing;">
+      <table tal:condition="log" class="listing" id="audit-log">   
+        <thead>
+            <tr>
+                <th>User</th>
+                <th>Last View</th>
+            </tr>
+        </thead>
+        <tbody>
+            <tal:loop repeat="entry log">
+            <tr tal:attributes="class   python: oddrow and 'odd' or 'even'"
+                tal:define="oddrow repeat/entry/odd">
+                <td>
+                    <span tal:content="entry/name"/>
+                </td>
+                <td tal:content="entry/date"/>
+            </tr>
+            </tal:loop>
+        </tbody>
+      </table>
+      <p tal:condition="not:log">
+        Either no one has viewed this, or there has been an error.
+      </p>
+  </dd>
+</dl>
+

@@ -1,0 +1,7 @@
+<?xml version="1.0"?>
+<portlets>
+
+ <assignment name="audit" category="context" key="/" 
+        manager="plone.rightcolumn" type="big.brother.auditlog" visible="False" />
+
+</portlets>

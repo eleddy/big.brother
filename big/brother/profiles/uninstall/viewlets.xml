@@ -1,0 +1,7 @@
+<?xml version="1.0"?>
+<object>
+ <!-- I think this is getting ignored... hrm...-->
+ <hidden manager="plone.belowcontenttitle" skinname="*">
+  <viewlet name="big.brother.iswatching"/>
+ </hidden>
+</object>

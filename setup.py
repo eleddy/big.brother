@@ -25,6 +25,7 @@ setup(name='big.brother',
       zip_safe=False,
       install_requires=[
           'setuptools',
+          'sqlalchemy',
           # -*- Extra requirements: -*-
       ],
       entry_points="""
@@ -33,6 +34,6 @@ setup(name='big.brother',
       [z3c.autoinclude.plugin]
       target = plone
       """,
-      setup_requires=["PasteScript"],
-      paster_plugins=["ZopeSkel"],
+      setup_requires=[],
+      paster_plugins=[],
       )

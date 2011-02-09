@@ -1,0 +1,19 @@
+<configure xmlns="http://namespaces.zope.org/zope"
+           xmlns:browser="http://namespaces.zope.org/browser"
+           xmlns:plone="http://namespaces.plone.org/plone">
+           
+   <include package="plone.app.portlets" />
+           
+   <plone:portlet
+        name="big.brother.auditlog"
+        interface=".audit.IAuditPortlet"
+        assignment=".audit.Assignment"
+        renderer=".audit.Renderer"
+        addview=".audit.AddForm"
+        editview=".audit.EditForm"
+        />        
+   
+    
+        
+</configure>
+
